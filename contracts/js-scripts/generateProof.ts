@@ -46,7 +46,7 @@ export default async function generateProof(): Promise<string> {
       // Public inputs
       root: merkleProof.root,
       nullifier_hash: bufferToHex(nullifierHash),
-      recepient: inputs[2],
+      _recepient: inputs[2],
 
       // Private inputs
       nullifier: bufferToHex(nullifier),

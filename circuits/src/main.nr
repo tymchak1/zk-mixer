@@ -3,7 +3,7 @@ mod merkle_tree;
 fn main(
     root: pub Field,
     nullifier_hash: pub Field,
-    recepient: pub Field,
+    _recepient: pub Field,
     // private
     nullifier: Field,
     secret: Field,
@@ -16,7 +16,4 @@ fn main(
 
     let computed_root = merkle_tree::compute_merkle_root(commitment, merkle_proof, is_even);
     assert(computed_root == root);
-
-    let recepient_binding = recepient * recepient;
-    assert(recepient_binding == recepient * recepient);
 }
